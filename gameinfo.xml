@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gamelist>
+	<game>
+		<path>./Digital Tamers 2.sh</path>
+		<name>Digital Tamers 2</name>
+		<desc>Embark on the Digital World and find new friends, adventures, and surprises! With more than 100 challenges, 50 unique quests, and more than 380 different Digimon to collect, the Digital World is yours to explore as you wish!</desc>
+		<image>./digitamers2/cover.png</image>
+		<releasedate>20240902</releasedate>
+		<developer>dragonrod342</developer>
+		<genre>Fighting</genre>
+	</game>
+</gamelist>

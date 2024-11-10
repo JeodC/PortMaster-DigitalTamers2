@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "name": "digitamers2.zip",
+  "items": [
+    "Digital Tamers 2.sh",
+    "digitamers2"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Digital Tamers 2",
+    "porter": [
+      "Jeod"
+    ],
+    "desc": "Embark on the Digital World and find new friends, adventures, and surprises! With more than 100 challenges, 50 unique quests, and more than 380 different Digimon to collect, the Digital World is yours to explore as you wish!",
+    "desc_md": null,
+    "inst": "Get the Windows exe file from https://dragonrod342.itch.io/digital-tamers-2 and put it in the `digitamers2/assets` directory.",
+    "inst_md": null,
+    "genres": [
+      "rpg"
+    ],
+    "image": null,
+    "rtr": false,
+    "exp": false,
+    "runtime": null,
+    "reqs": [],
+    "arch": [
+      "armhf"
+    ]
+  }
+}
