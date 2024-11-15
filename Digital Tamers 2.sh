@@ -17,7 +17,7 @@ source $controlfolder/control.txt
 get_controls
 
 # Variables
-GAMEDIR="/$directory/ports/digitaltamers2"
+GAMEDIR="/$directory/ports/digitamers2"
 
 # CD and set permissions
 cd $GAMEDIR

@@ -37,6 +37,27 @@ unzip_assets() {
     fi
 }
 
+unzip_patch() {
+    echo "Unzipping the patch file..."
+    if [ -f "./tools/patches/dt2.zip.001" ]; then
+        if [ -x "$(command -v 7z)" ]; then
+            ./tools/7za x ./tools/patches/dt2.zip.001 -o./tools/patches
+            if [ $? -eq 0 ]; then
+                echo "Patch file successfully extracted."
+                rm ./tools/patches/dt2.zip.*
+            else
+                echo "Failed to extract multi-part archive."
+                exit 1
+            fi
+        else
+            echo "7za tool is not available. Failed to extract xdelta patch."
+            exit 1
+        fi
+    else
+        echo "Patch archive not found!"
+        exit 1
+    fi
+}
 apply_xdelta() {
     # Check if both data.win and dt2.xdelta files exist before applying the patch
     if [ -f "$DATADIR/data.win" ]; then
@@ -105,18 +126,9 @@ process_game() {
     fi
     
     # Unzip the xdelta
-    echo "Unzipping the patch file..."
-    cat "./tools/patches/dt2.zip."* > "./tools/patches/dt2.zip"
-    if unzip "./tools/patches/dt2.zip"; then
-        echo "Unzip successful, removing the zip file..."
-        rm -rf "./tools/patches/dt2.zip"
-    else
-        echo "Unzip failed, exiting..."
-        sleep 2
-        exit 1
-    fi
-    
-    echo "Applying xdelta patch"
+    echo "Unpacking xdelta patch..."
+    unzip_patch
+    echo "Applying xdelta patch..."
     apply_xdelta
     sleep 1
     echo "Compressing audio..."
