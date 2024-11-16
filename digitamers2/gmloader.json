@@ -3,5 +3,5 @@
     "apk_path" : "digital_tamers_2.port",
     "show_cursor" : true,
     "disable_controller" : true,
-    "force_platform" : "os_windows"
+    "force_platform" : "os_android"
 }
